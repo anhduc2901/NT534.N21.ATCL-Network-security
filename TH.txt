@@ -1,0 +1,8 @@
+Khách hàng có hệ thống payment với current transaction là 10K .Hệ thống có kiến 
+trúc ứng dụng theo 3 lớp :  1.Presentation Layer : 3 Web , 3 API ,  2.Business 
+layer : 5 App , . 3.Database layer : 3 MySQL , 2 Redis . Yêu cầu : 1) Xây dựng 
+kiến trúc ứng dụng , 2.)Tích hợp các giải pháp bảo mật cần thiết để phòng chống 
+: malware,threat,vulnerability,Top 10 OWASP với mỗi thành phần 
+bảo mật,nêu rõ 3 vai trò quan trọng  3)Xây dựng đội ngũ vận hành xử lý sự cố 
+an 
+toàn thông tin . 24/7/365   + MTTA&MTTR  +SLA&KPI

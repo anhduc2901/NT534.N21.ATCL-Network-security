@@ -1,0 +1,61 @@
+1.On-demand self service 
+	tự động tạo và quản lý các dịch vụ bảo mật trong môi trường cloud
+
+2.Distributed storage
+	 lưu trữ dữ liệu trên nhiều hệ thống lưu trữ khác nhau và phân tán 
+	trên nhiều vị trí
+
+3.Rapid elasticity
+	mở rộng hoặc thu hẹp các tài nguyên bảo mật
+		CapEX
+		OpEX
+
+4.Automated management
+	tự động hóa quản lý và triển khai các biện pháp bảo mật trong môi 
+	trường đám mây 
+
+5.Broad network access
+	khả năng truy cập rộng rãi vào các dịch vụ và tài nguyên đám mây 
+	từ nhiều thiết bị và địa điểm khác nhau.
+
+6.resource pooling
+	tổng hợp và chia sẻ tài nguyên tính toán, lưu trữ và mạng trong một môi 
+	trường đám mây để tối ưu hóa sử dụng và cung cấp dịch vụ linh hoạt và 
+	hiệu quả
+
+7.Measured service
+	khả năng theo dõi, đo lường và ghi nhận việc 
+	sử dụng tài nguyên của dịch vụ đám mây
+
+8.Virtualization technology
+	công nghệ ảo hóa được sử dụng để tạo ra môi trường ảo trong đám mây.
+
+
+Cloud provider : region : south , north asian :  zones : data center : 
+	country : 
+		local/zone/region redundant
+			update domain
+				planned : things updating
+			Fault domain
+				unexpected things ,ex : rack movement 
+		network
+		power
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

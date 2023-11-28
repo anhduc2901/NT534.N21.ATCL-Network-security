@@ -1,0 +1,57 @@
+Endpoint detection response
+
+	Architecture
+-end point ,lap/desk,mobile->server->cloud
+
+	Features
+-Network protection (included : fw)
+-Email protection
+-advance threat protection
+
+
+2000->2012 : AV ,Host IDS , Personal Firewall
+2010->2020 : 	Data leak prevention 
+	Device,App control
+	Web Filtering
+
+2020->now  : Discovery 
+			vulnerabilities
+			threat
+
+
+EDR (Endpoint Detection and Response) là một loại công nghệ và phương pháp bảo
+mật dùng để phát hiện, phản ứng và giám sát các hoạt động độc hại trên các 
+thiết bị đầu cuối trong mạng của một tổ chức. EDR tập trung vào việc thu thập
+, phân tích và báo cáo các dữ liệu và sự kiện từ các thiết bị đầu cuối nhằm 
+phát hiện các hành vi xâm nhập, phá hoại hoặc các mối đe dọa tiềm ẩn.
+
+Next-Generation EDR (NG-EDR) là một tiến bộ hơn của EDR, đưa ra các khả năng 
+mạnh mẽ hơn để phát hiện và chống lại các mối đe dọa tiên tiến và phức tạp 
+hơn. NG-EDR thường kết hợp các tính năng bổ sung như machine learning, trí 
+tuệ nhân tạo, và tự động hóa để phát hiện các mẫu tấn công mới và không xác 
+định trước.
+
+	Phân tích dựa trên quy tắc (Rule-based analysis) vs. Machine Learning:
+
+EDR: Trong EDR truyền thống, phân tích dựa trên quy tắc được sử dụng để xác 
+định các hành vi độc hại dựa trên các quy tắc đã được thiết lập trước. 
+
+Ví dụ: Một quy tắc có thể báo cáo khi một tiến trình lạ chạy trên máy tính.
+NG-EDR: NG-EDR sử dụng machine learning và trí tuệ nhân tạo để phân tích dữ 
+liệu từ các thiết bị đầu cuối. Nó có khả năng tự động học và phát hiện các 
+mẫu tấn công mới và không xác định trước mà không cần phải dựa vào quy tắc 
+cố định.
+
+	Phản ứng tự động (Automated response) và tự động hóa (Automation):
+EDR: EDR truyền thống có thể cung cấp thông báo và cung cấp dữ liệu để hỗ 
+trợ quá trình phản ứng của nhân viên an ninh. Tuy nhiên, các biện pháp phản 
+ứng chủ yếu được thực hiện bằng tay bởi nhân viên.
+NG-EDR: NG-EDR thường có khả năng phản ứng tự động và tự động hóa quy trình 
+phản ứng. Khi phát hiện một mối đe dọa, nó có thể triển khai tự động các biện 
+pháp 
+
+	Tích hợp tình báo đe dọa (Threat intelligence integration):
+các mẫu tấn công, địa chỉ IP độc hại, hoặc tên miền đáng ngờ.
+sử dụng các nguồn thông tin đa dạng như tình báo bên ngoài, cộng đồng an ninh
+, hoặc tài nguyên nội bộ để phát hiện và phản ứng đối với các mối đe dọa tiên 
+tiến và mới.

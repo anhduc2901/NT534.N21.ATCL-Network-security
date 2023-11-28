@@ -1,0 +1,48 @@
+			Configuring and running scans for agents
+
+
+1.Add và enable các Vulnerability Detector trên agent
+2.Enable Vulnerability Detector module ở wazuh server
+3.Restart để apply changes
+=> Scan thì  ra logs : 
+	CVE(identifier for the corresponding vulnerability),
+	Title,
+	description of the vulnerability
+	Impact of the vulnerability,...
+=> Mục đích :bảo vệ hệ thống và dữ liệu , agent thường chạy ứng dụng và dịch vụ 
+=>  có các lỗ hổng bảo mật mà kẻ tấn công có thể tận dụng để xâm nhập vào hệ thống
+
+
+
+
+		Detecting shellshock attack
+
+
+1. victim là webserver ,attacker : kali linux
+- cấu hình các thứ để agent host web server , cấu hình agent giám sát logs của webserver
+- attacker tấn công ,...
+
+
+
+		Wazuh SCA (Security Configuration Assessment)
+1.Detecting keyword in a file
+
+-tạo file trên ubuntu endpoint có chứa từ khóa
+-tạo custom policy files (SCA) : cho phép Wazuh SCA sử dụng file "keywordcheck.yml" để quét file  trên endpoint
+-set quyền cho wazuh scan
+-enable custom policy
+-restart agent để apply changes
+		ubuntu , windown tương tự
+
+
+
+
+
+
+
+
+
+
+
+
+		

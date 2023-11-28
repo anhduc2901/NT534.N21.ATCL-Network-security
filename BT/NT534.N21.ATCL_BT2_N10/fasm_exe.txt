@@ -1,0 +1,47 @@
++------------------------+------------------------------------------------------------------------------------+
+| md5                    | db471fb99317c367f81fa0d4d89debf3                                                   |
+| sha1                   | eb01d2f90228481a9323112bfadb036f5609bc9c                                           |
+| sha256                 | b81af7a8c2f713b1b3c9f535e9aedfc82cee56a30af297215df323811a716f8e                   |
+| os                     | windows                                                                            |
+| format                 | pe                                                                                 |
+| arch                   | i386                                                                               |
+| path                   | /home/kali/Desktop/ATMMT/capa/files/exe/FASM.EXE                                   |
++------------------------+------------------------------------------------------------------------------------+
+
++------------------------+------------------------------------------------------------------------------------+
+| ATT&CK Tactic          | ATT&CK Technique                                                                   |
+|------------------------+------------------------------------------------------------------------------------|
+| DEFENSE EVASION        | Obfuscated Files or Information T1027                                              |
+| DISCOVERY              | System Information Discovery T1082                                                 |
+| EXECUTION              | Command and Scripting Interpreter T1059                                            |
++------------------------+------------------------------------------------------------------------------------+
+
++-----------------------------+-------------------------------------------------------------------------------+
+| MBC Objective               | MBC Behavior                                                                  |
+|-----------------------------+-------------------------------------------------------------------------------|
+| ANTI-BEHAVIORAL ANALYSIS    | Debugger Detection::Timing/Delay Check GetTickCount [B0001.032]               |
+| DATA                        | Encode Data::XOR [C0026.002]                                                  |
+|                             | Non-Cryptographic Hash::FNV [C0030.005]                                       |
+| DEFENSE EVASION             | Obfuscated Files or Information::Encoding-Standard Algorithm [E1027.m02]      |
+| DISCOVERY                   | System Information Discovery [E1082]                                          |
+| EXECUTION                   | Command and Scripting Interpreter [E1059]                                     |
+| FILE SYSTEM                 | Read File [C0051]                                                             |
+|                             | Writes File [C0052]                                                           |
+| PROCESS                     | Terminate Process [C0018]                                                     |
++-----------------------------+-------------------------------------------------------------------------------+
+
++------------------------------------------------------+------------------------------------------------------+
+| CAPABILITY                                           | NAMESPACE                                            |
+|------------------------------------------------------+------------------------------------------------------|
+| check for time delay via GetTickCount                | anti-analysis/anti-debugging/debugger-detection      |
+| encode data using XOR (2 matches)                    | data-manipulation/encoding/xor                       |
+| hash data using fnv (2 matches)                      | data-manipulation/hashing/fnv                        |
+| accept command line arguments                        | host-interaction/cli                                 |
+| query environment variable (47 matches)              | host-interaction/environment-variable                |
+| read file on Windows                                 | host-interaction/file-system/read                    |
+| write file on Windows (5 matches)                    | host-interaction/file-system/write                   |
+| get memory capacity                                  | host-interaction/hardware/memory                     |
+| terminate process (47 matches)                       | host-interaction/process/terminate                   |
+| resolve function by parsing PE exports               | load-code/pe                                         |
++------------------------------------------------------+------------------------------------------------------+
+

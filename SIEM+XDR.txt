@@ -1,0 +1,24 @@
+SOC : security operation center
+
+TPP : technology people produce
+
+
+	Cloud SIEM
+
+
+	On premises SIEM
+Complicated Deploy :4
+
+
+
+SIEM : core : NGFW,IDS,WAF,DBF,EDR,NDR,...
+|
+Dash board : Centralized logs
+|
+SOAR :  security orchestration automation 
+(play book)
+
+Microsoft sentinel : 
+	scale , 
+	detect threats
+	incident response 

@@ -1,0 +1,54 @@
+			ACL			Statefull				NG-FW
+
+
+1.Vị trí đặt	Core				Perimeter/front of server farm		Perimeter, f o s f
+	
+2.Filter	IP,port,protocols		IP,port,protocols			Header(Ip,protocols,port ), payload
+
+3.Connection	Stateless			Statefull				Statefull
+
+4.Features	Network security		Network security			Network security,Application security (Web filter,Application)
+											Integrate Active Directory to identify users
+											malware, attacks.signature-based
+
+
+Ví dụ, để cho phép truy cập vào dịch vụ web trên DMZ từ bên ngoài mạng, 
+Firewall sẽ được cấu hình để mở cổng 80 hoặc 443. Trong khi đó, ACL sẽ được cấu hình trên 
+server web trong DMZ để chỉ cho phép các truy cập từ một số địa chỉ IP cụ thể, như các máy chủ
+ proxy hoặc các server ở mạng nội bộ. Điều này giúp ngăn chặn các cuộc tấn công từ bên ngoài và
+ chỉ cho phép các truy cập được phép vào dịch vụ web trong DMZ.
+
+
+			App firewall	2-7					Web app firewall
+1			Perimeter/ front of server farm				DMZ/front of web app Server
+
+2			Header / payload					Header / payload (HTTPS header)
+
+3
+
+4
+
+5
+
+bridge-mode để kết nối các thiết bị mạng khác vào một mạng lớn hơn. Trong chế độ bridge mode,
+  tất cả các gói tin sẽ được truyền qua các cổng
+ của thiết bị mà không có bất kỳ định tuyến nào diễn ra.
+	(mạng LAN, đc kết nối trực tiếp)
+
+Chế độ transparent mode (chế độ trong suốt)  cho phép các thiết bị kết nối đến mạng của bạn mà không cần 
+phải cấu hình lại địa chỉ IP hoặc thông số mạng khác. Chế độ này được sử dụng khi bạn muốn tạo một kết nối
+ mạng không định tuyến giữa các thiết bị mạng, và đặc biệt hữu ích khi bạn muốn kết nối các thiết bị mạng 
+khác nhau nhưng chúng không 
+tương thích với nhau về cấu hình mạng.
+
+Thiết bị không tương thích với nhau về cấu hình mạng là tình trạng khi các thiết bị trong mạng không thể giao tiếp với nhau vì các cấu hình mạng khác nhau, ví dụ như địa chỉ IP, subnet mask, gateway, DNS, v.v.
+Tuy nhiên, chế độ transparent mode không phổ biến bằng chế độ bridge mode và được sử dụng trong một số 
+trường hợp đặc biệt.
+
+vd: Khi một công ty muốn giữ nguyên các địa chỉ IP của các thiết bị trong mạng của họ và không muốn thay 
+đổi khi kết nối với mạng của một nhà cung cấp dịch vụ khác.
+
+Khi một doanh nghiệp muốn kết nối hai mạng khác nhau mà không thay đổi bất kỳ thông tin mạng nào của hai 
+mạng đó.
+
+Khi cần triển khai các giải pháp bảo mật để giám sát và kiểm soát các luồng dữ liệu trong mạng.

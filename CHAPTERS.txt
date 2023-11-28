@@ -1,0 +1,27 @@
+1.NGFW
+
+2.WAF
+
+3.Database security
+
+4.NG IDPS
+
+5.NG threat protection
+
+6.NG endpoint protection (EDR)
+
+7.SIEM (XDR)
+
+8.SOC
+
+9.Cloud security
+
+TECH
+
+PEOPLE
+	Principle engineer : manager,leader
+	sr engineer
+	engineer
+	assosiate
+
+PROCESSES : MTTA,MTTR,SLA,KPI

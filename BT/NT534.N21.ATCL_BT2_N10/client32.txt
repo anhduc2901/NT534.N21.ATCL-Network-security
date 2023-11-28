@@ -1,0 +1,167 @@
++------------------------+------------------------------------------------------------------------------------+
+| md5                    | fac741d0618b82cdf7c41c89cffdb19e                                                   |
+| sha1                   | 4bae603e24ac042402555fdaefaecd5bfd8883bc                                           |
+| sha256                 | c980ee1107a12c2da7f71e10b3808e1c60481b1eb9d253ca3b387e5cb246ab50                   |
+| os                     | windows                                                                            |
+| format                 | pe                                                                                 |
+| arch                   | i386                                                                               |
+| path                   | /home/kali/Desktop/ATMMT/capa/files/exe/client32.bin                               |
++------------------------+------------------------------------------------------------------------------------+
+
++------------------------+------------------------------------------------------------------------------------+
+| ATT&CK Tactic          | ATT&CK Technique                                                                   |
+|------------------------+------------------------------------------------------------------------------------|
+| COLLECTION             | Clipboard Data T1115                                                               |
+|                        | Input Capture::Keylogging T1056.001                                                |
+| DEFENSE EVASION        | File and Directory Permissions Modification T1222                                  |
+|                        | Modify Registry T1112                                                              |
+|                        | Obfuscated Files or Information T1027                                              |
+|                        | Obfuscated Files or Information::Indicator Removal from Tools T1027.005            |
+| DISCOVERY              | Account Discovery T1087                                                            |
+|                        | File and Directory Discovery T1083                                                 |
+|                        | Process Discovery T1057                                                            |
+|                        | Query Registry T1012                                                               |
+|                        | Software Discovery T1518                                                           |
+|                        | System Information Discovery T1082                                                 |
+|                        | System Location Discovery::System Language Discovery T1614.001                     |
+|                        | System Network Configuration Discovery T1016                                       |
+|                        | System Owner/User Discovery T1033                                                  |
+| EXECUTION              | Command and Scripting Interpreter T1059                                            |
+|                        | Shared Modules T1129                                                               |
+| IMPACT                 | System Shutdown/Reboot T1529                                                       |
+| PERSISTENCE            | Boot or Logon Autostart Execution::Registry Run Keys / Startup Folder T1547.001    |
+| PRIVILEGE ESCALATION   | Access Token Manipulation T1134                                                    |
++------------------------+------------------------------------------------------------------------------------+
+
++-----------------------------+-------------------------------------------------------------------------------+
+| MBC Objective               | MBC Behavior                                                                  |
+|-----------------------------+-------------------------------------------------------------------------------|
+| ANTI-BEHAVIORAL ANALYSIS    | Debugger Detection::Timing/Delay Check GetTickCount [B0001.032]               |
+| COLLECTION                  | Keylogging::Polling [F0002.002]                                               |
+| COMMAND AND CONTROL         | C2 Communication::Receive Data [B0030.002]                                    |
+|                             | C2 Communication::Send Data [B0030.001]                                       |
+| COMMUNICATION               | DNS Communication::Resolve [C0011.001]                                        |
+|                             | HTTP Communication::Connect to Server [C0002.009]                             |
+|                             | HTTP Communication::Create Request [C0002.012]                                |
+|                             | HTTP Communication::Get Response [C0002.017]                                  |
+|                             | HTTP Communication::Read Header [C0002.014]                                   |
+|                             | HTTP Communication::Send Request [C0002.003]                                  |
+|                             | Socket Communication::Get Socket Status [C0001.012]                           |
+|                             | Socket Communication::Initialize Winsock Library [C0001.009]                  |
+|                             | Socket Communication::Receive Data [C0001.006]                                |
+|                             | Socket Communication::Send Data [C0001.007]                                   |
+|                             | Socket Communication::Set Socket Config [C0001.001]                           |
+| CRYPTOGRAPHY                | Cryptographic Hash [C0029]                                                    |
+|                             | Cryptographic Hash::MD5 [C0029.001]                                           |
+|                             | Encrypt Data [C0027]                                                          |
+|                             | Encrypt Data::RC4 [C0027.009]                                                 |
+|                             | Generate Pseudo-random Sequence [C0021]                                       |
+|                             | Generate Pseudo-random Sequence::RC4 PRGA [C0021.004]                         |
+| DATA                        | Checksum::CRC32 [C0032.001]                                                   |
+|                             | Encode Data::XOR [C0026.002]                                                  |
+| DEFENSE EVASION             | Obfuscated Files or Information::Encoding-Standard Algorithm [E1027.m02]      |
+| DISCOVERY                   | File and Directory Discovery [E1083]                                          |
+|                             | System Information Discovery [E1082]                                          |
+| EXECUTION                   | Command and Scripting Interpreter [E1059]                                     |
+| FILE SYSTEM                 | Create Directory [C0046]                                                      |
+|                             | Delete Directory [C0048]                                                      |
+|                             | Delete File [C0047]                                                           |
+|                             | Get File Attributes [C0049]                                                   |
+|                             | Move File [C0063]                                                             |
+|                             | Read File [C0051]                                                             |
+|                             | Set File Attributes [C0050]                                                   |
+|                             | Writes File [C0052]                                                           |
+| MEMORY                      | Allocate Memory [C0007]                                                       |
+| OPERATING SYSTEM            | Registry::Delete Registry Key [C0036.002]                                     |
+|                             | Registry::Delete Registry Value [C0036.007]                                   |
+|                             | Registry::Query Registry Key [C0036.005]                                      |
+|                             | Registry::Query Registry Value [C0036.006]                                    |
+|                             | Registry::Set Registry Key [C0036.001]                                        |
+| PROCESS                     | Allocate Thread Local Storage [C0040]                                         |
+|                             | Check Mutex [C0043]                                                           |
+|                             | Create Mutex [C0042]                                                          |
+|                             | Create Process [C0017]                                                        |
+|                             | Create Thread [C0038]                                                         |
+|                             | Enumerate Threads [C0064]                                                     |
+|                             | Set Thread Local Storage Value [C0041]                                        |
+|                             | Terminate Process [C0018]                                                     |
++-----------------------------+-------------------------------------------------------------------------------+
+
++------------------------------------------------------+------------------------------------------------------+
+| CAPABILITY                                           | NAMESPACE                                            |
+|------------------------------------------------------+------------------------------------------------------|
+| check for time delay via GetTickCount (2 matches)    | anti-analysis/anti-debugging/debugger-detection      |
+| log keystrokes                                       | collection/keylog                                    |
+| log keystrokes via polling                           | collection/keylog                                    |
+| query remote server for available data               | communication                                        |
+| send data (7 matches)                                | communication                                        |
+| receive and write data from server to client         | communication/c2/file-transfer                       |
+| resolve DNS (3 matches)                              | communication/dns                                    |
+| parse URL (4 matches)                                | communication/http                                   |
+| check HTTP status code (2 matches)                   | communication/http/client                            |
+| connect to HTTP server (2 matches)                   | communication/http/client                            |
+| get socket information (5 matches)                   | communication/socket                                 |
+| get socket status (4 matches)                        | communication/socket                                 |
+| initialize Winsock library                           | communication/socket                                 |
+| set socket configuration                             | communication/socket                                 |
+| hash data with CRC32                                 | data-manipulation/checksum/crc32                     |
+| encode data using XOR (17 matches)                   | data-manipulation/encoding/xor                       |
+| encrypt data using DPAPI                             | data-manipulation/encryption/dpapi                   |
+| encrypt data using RC4 PRGA (2 matches)              | data-manipulation/encryption/rc4                     |
+| hash data via WinCrypt                               | data-manipulation/hashing                            |
+| initialize hashing via WinCrypt                      | data-manipulation/hashing                            |
+| hash data with MD5                                   | data-manipulation/hashing/md5                        |
+| generate random numbers using the Delphi LCG         | data-manipulation/prng/lcg                           |
+| generate random numbers using a Mersenne Twister     | data-manipulation/prng/mersenne                      |
+| list user accounts                                   | host-interaction/accounts                            |
+| accept command line arguments                        | host-interaction/cli                                 |
+| read clipboard data                                  | host-interaction/clipboard                           |
+| query environment variable (8 matches)               | host-interaction/environment-variable                |
+| get Program Files directory (2 matches)              | host-interaction/file-system                         |
+| get common file path (18 matches)                    | host-interaction/file-system                         |
+| create directory (3 matches)                         | host-interaction/file-system/create                  |
+| delete directory                                     | host-interaction/file-system/delete                  |
+| delete file                                          | host-interaction/file-system/delete                  |
+| check if file exists (6 matches)                     | host-interaction/file-system/exists                  |
+| enumerate files recursively (2 matches)              | host-interaction/file-system/files/list              |
+| get file attributes (7 matches)                      | host-interaction/file-system/meta                    |
+| get file size (2 matches)                            | host-interaction/file-system/meta                    |
+| set file attributes (3 matches)                      | host-interaction/file-system/meta                    |
+| move file                                            | host-interaction/file-system/move                    |
+| read .ini file (4 matches)                           | host-interaction/file-system/read                    |
+| read file on Windows (6 matches)                     | host-interaction/file-system/read                    |
+| write file on Windows (6 matches)                    | host-interaction/file-system/write                   |
+| get disk information                                 | host-interaction/hardware/storage                    |
+| check mutex                                          | host-interaction/mutex                               |
+| check mutex and exit (3 matches)                     | host-interaction/mutex                               |
+| get local IPv4 addresses (5 matches)                 | host-interaction/network/address                     |
+| shutdown system (2 matches)                          | host-interaction/os                                  |
+| get hostname                                         | host-interaction/os/hostname                         |
+| get system information on Windows                    | host-interaction/os/info                             |
+| check OS version                                     | host-interaction/os/version                          |
+| allocate thread local storage                        | host-interaction/process                             |
+| get thread local storage value (8 matches)           | host-interaction/process                             |
+| set thread local storage value                       | host-interaction/process                             |
+| create process on Windows (3 matches)                | host-interaction/process/create                      |
+| allocate RWX memory (5 matches)                      | host-interaction/process/inject                      |
+| enumerate processes                                  | host-interaction/process/list                        |
+| modify access privileges                             | host-interaction/process/modify                      |
+| terminate process (4 matches)                        | host-interaction/process/terminate                   |
+| query or enumerate registry key (3 matches)          | host-interaction/registry                            |
+| query or enumerate registry value (4 matches)        | host-interaction/registry                            |
+| set registry value                                   | host-interaction/registry/create                     |
+| delete registry key                                  | host-interaction/registry/delete                     |
+| delete registry value                                | host-interaction/registry/delete                     |
+| get session user name (2 matches)                    | host-interaction/session                             |
+| compare security identifiers                         | host-interaction/sid                                 |
+| create thread (4 matches)                            | host-interaction/thread/create                       |
+| enumerate threads                                    | host-interaction/thread/list                         |
+| access PEB ldr_data                                  | linking/runtime-linking                              |
+| link many functions at runtime (2 matches)           | linking/runtime-linking                              |
+| resolve function by hash                             | linking/runtime-linking                              |
+| parse PE header                                      | load-code/pe                                         |
+| resolve function by parsing PE exports               | load-code/pe                                         |
+| get startup folder                                   | persistence/startup-folder                           |
+| identify system language via API                     | targeting/language                                   |
++------------------------------------------------------+------------------------------------------------------+
+

@@ -1,0 +1,39 @@
++------------------------+------------------------------------------------------------------------------------+
+| md5                    | 8440867fa945837094a4494b9334f559                                                   |
+| sha1                   | a014a651eb8a04a71aa3dcbe24250aca391c28a0                                           |
+| sha256                 | fc16acb8a822aaa72bb4c7e4b0372bc664e69535255267463e49605c813aad0a                   |
+| os                     | windows                                                                            |
+| format                 | pe                                                                                 |
+| arch                   | i386                                                                               |
+| path                   | /home/kali/Desktop/ATMMT/capa/files/dll/php_mbstring.dll                           |
++------------------------+------------------------------------------------------------------------------------+
+
++------------------------+------------------------------------------------------------------------------------+
+| ATT&CK Tactic          | ATT&CK Technique                                                                   |
+|------------------------+------------------------------------------------------------------------------------|
+| DEFENSE EVASION        | Obfuscated Files or Information T1027                                              |
++------------------------+------------------------------------------------------------------------------------+
+
++-----------------------------+-------------------------------------------------------------------------------+
+| MBC Objective               | MBC Behavior                                                                  |
+|-----------------------------+-------------------------------------------------------------------------------|
+| DATA                        | Check String [C0019]                                                          |
+|                             | Checksum::Luhn [C0032.002]                                                    |
+|                             | Encode Data::Base64 [C0026.001]                                               |
+| DISCOVERY                   | Code Discovery::Inspect Section Memory Permissions [B0046.002]                |
+| PROCESS                     | Terminate Process [C0018]                                                     |
++-----------------------------+-------------------------------------------------------------------------------+
+
++------------------------------------------------------+------------------------------------------------------+
+| CAPABILITY                                           | NAMESPACE                                            |
+|------------------------------------------------------+------------------------------------------------------|
+| parse credit card information (4 matches)            | collection/credit-card                               |
+| validate payment card number using luhn algorithm    | data-manipulation/checksum/luhn                      |
+| reference Base64 string                              | data-manipulation/encoding/base64                    |
+| contains PDB path                                    | executable/pe/pdb                                    |
+| contain a resource (.rsrc) section                   | executable/pe/section/rsrc                           |
+| terminate process                                    | host-interaction/process/terminate                   |
+| inspect section memory permissions (2 matches)       | load-code/pe                                         |
+| resolve function by parsing PE exports (3 matches)   | load-code/pe                                         |
++------------------------------------------------------+------------------------------------------------------+
+

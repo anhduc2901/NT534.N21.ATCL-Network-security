@@ -1,0 +1,68 @@
++------------------------+------------------------------------------------------------------------------------+
+| md5                    | a51d90f2f9394f5ea0a3acae3bd2b219                                                   |
+| sha1                   | 20fea1314dbed552d5fedee096e2050369172ee1                                           |
+| sha256                 | ac9674feb8f2fad20c1e046de67f899419276ae79a60e8cc021a4bf472ae044f                   |
+| os                     | windows                                                                            |
+| format                 | pe                                                                                 |
+| arch                   | i386                                                                               |
+| path                   | /home/kali/Desktop/ATMMT/capa/files/exe/7z.exe                                     |
++------------------------+------------------------------------------------------------------------------------+
+
++------------------------+------------------------------------------------------------------------------------+
+| ATT&CK Tactic          | ATT&CK Technique                                                                   |
+|------------------------+------------------------------------------------------------------------------------|
+| DEFENSE EVASION        | File and Directory Permissions Modification T1222                                  |
+|                        | Obfuscated Files or Information T1027                                              |
+| DISCOVERY              | File and Directory Discovery T1083                                                 |
+|                        | Process Discovery T1057                                                            |
+|                        | Query Registry T1012                                                               |
+|                        | System Information Discovery T1082                                                 |
+| EXECUTION              | Command and Scripting Interpreter T1059                                            |
+|                        | Shared Modules T1129                                                               |
+|                        | System Services::Service Execution T1569.002                                       |
++------------------------+------------------------------------------------------------------------------------+
+
++-----------------------------+-------------------------------------------------------------------------------+
+| MBC Objective               | MBC Behavior                                                                  |
+|-----------------------------+-------------------------------------------------------------------------------|
+| DATA                        | Encode Data::XOR [C0026.002]                                                  |
+| DEFENSE EVASION             | Obfuscated Files or Information::Encoding-Standard Algorithm [E1027.m02]      |
+| DISCOVERY                   | File and Directory Discovery [E1083]                                          |
+| EXECUTION                   | Command and Scripting Interpreter [E1059]                                     |
+| FILE SYSTEM                 | Create Directory [C0046]                                                      |
+|                             | Delete Directory [C0048]                                                      |
+|                             | Delete File [C0047]                                                           |
+|                             | Move File [C0063]                                                             |
+|                             | Read File [C0051]                                                             |
+|                             | Set File Attributes [C0050]                                                   |
+|                             | Writes File [C0052]                                                           |
+| OPERATING SYSTEM            | Registry::Query Registry Value [C0036.006]                                    |
+| PROCESS                     | Create Thread [C0038]                                                         |
++-----------------------------+-------------------------------------------------------------------------------+
+
++------------------------------------------------------+------------------------------------------------------+
+| CAPABILITY                                           | NAMESPACE                                            |
+|------------------------------------------------------+------------------------------------------------------|
+| encode data using XOR                                | data-manipulation/encoding/xor                       |
+| contain a resource (.rsrc) section                   | executable/pe/section/rsrc                           |
+| accept command line arguments                        | host-interaction/cli                                 |
+| interact with driver via control codes               | host-interaction/driver                              |
+| get common file path (9 matches)                     | host-interaction/file-system                         |
+| set current directory                                | host-interaction/file-system                         |
+| create directory (2 matches)                         | host-interaction/file-system/create                  |
+| delete directory                                     | host-interaction/file-system/delete                  |
+| delete file (2 matches)                              | host-interaction/file-system/delete                  |
+| get file size                                        | host-interaction/file-system/meta                    |
+| set file attributes (3 matches)                      | host-interaction/file-system/meta                    |
+| move file (2 matches)                                | host-interaction/file-system/move                    |
+| read file on Windows (2 matches)                     | host-interaction/file-system/read                    |
+| read file via mapping                                | host-interaction/file-system/read                    |
+| write file on Windows (2 matches)                    | host-interaction/file-system/write                   |
+| get memory capacity                                  | host-interaction/hardware/memory                     |
+| get process heap flags (2 matches)                   | host-interaction/process                             |
+| query or enumerate registry value (2 matches)        | host-interaction/registry                            |
+| create thread                                        | host-interaction/thread/create                       |
+| access PEB ldr_data (3 matches)                      | linking/runtime-linking                              |
+| link function at runtime on Windows (7 matches)      | linking/runtime-linking                              |
++------------------------------------------------------+------------------------------------------------------+
+

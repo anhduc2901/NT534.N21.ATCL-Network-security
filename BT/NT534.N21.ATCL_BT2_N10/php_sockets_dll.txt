@@ -1,0 +1,45 @@
++------------------------+------------------------------------------------------------------------------------+
+| md5                    | de678c1262dc532cbf65ab3a6c047efb                                                   |
+| sha1                   | 2818ae8e50b003d135b3445f6b93f1827cb2407d                                           |
+| sha256                 | ae3f04f0c2b8ca97b22cd1bb6fe67dfb04d30c15d1db9a8a0c55d452e2000532                   |
+| os                     | windows                                                                            |
+| format                 | pe                                                                                 |
+| arch                   | i386                                                                               |
+| path                   | /home/kali/Desktop/ATMMT/capa/files/dll/php_sockets.dll                            |
++------------------------+------------------------------------------------------------------------------------+
+
++------------------------+------------------------------------------------------------------------------------+
+| ATT&CK Tactic          | ATT&CK Technique                                                                   |
+|------------------------+------------------------------------------------------------------------------------|
+| DISCOVERY              | System Network Configuration Discovery T1016                                       |
++------------------------+------------------------------------------------------------------------------------+
+
++-----------------------------+-------------------------------------------------------------------------------+
+| MBC Objective               | MBC Behavior                                                                  |
+|-----------------------------+-------------------------------------------------------------------------------|
+| COMMAND AND CONTROL         | C2 Communication::Receive Data [B0030.002]                                    |
+|                             | C2 Communication::Send Data [B0030.001]                                       |
+| COMMUNICATION               | DNS Communication::Resolve [C0011.001]                                        |
+|                             | Socket Communication::Get Socket Status [C0001.012]                           |
+|                             | Socket Communication::Receive Data [C0001.006]                                |
+|                             | Socket Communication::Send Data [C0001.007]                                   |
+|                             | Socket Communication::Set Socket Config [C0001.001]                           |
+| PROCESS                     | Terminate Process [C0018]                                                     |
++-----------------------------+-------------------------------------------------------------------------------+
+
++------------------------------------------------------+------------------------------------------------------+
+| CAPABILITY                                           | NAMESPACE                                            |
+|------------------------------------------------------+------------------------------------------------------|
+| receive data (4 matches)                             | communication                                        |
+| send data (3 matches)                                | communication                                        |
+| resolve DNS (3 matches)                              | communication/dns                                    |
+| convert IP address from string                       | communication/ip                                     |
+| get socket information                               | communication/socket                                 |
+| get socket status                                    | communication/socket                                 |
+| set socket configuration                             | communication/socket                                 |
+| contains PDB path                                    | executable/pe/pdb                                    |
+| contain a resource (.rsrc) section                   | executable/pe/section/rsrc                           |
+| get local IPv4 addresses                             | host-interaction/network/address                     |
+| terminate process                                    | host-interaction/process/terminate                   |
++------------------------------------------------------+------------------------------------------------------+
+
